@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAM</title>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- fuentes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- link hoja de estilos -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+  <header>
+    <!-- NAV -->
+    <section>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid div__Nav">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../imagenes/CAM Final.png" alt="" width="280" height="110"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="institucional.html">Institucional</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="autodiagnostico.html">Autodiagnostico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="etapas.html">Etapas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!---- fin NAV -->
+  </header>
+
+  <!--------------------- DIV ---  AutoDiagnostico -->
+  <div class="autodiagnostico__titulo">
+    <h2>El <strong>AutoDiagnostico CAM</strong></h2>
+    <div class="div-parrafo">
+      es un modelo de evaluacion que te permitira conocer con certeza en que momento de trabajo se encuentra tu Empresa y te dara
+        las herramientas que necesitas.
+        El modelo de evaluacion consta de 10 preguntas, donde cada una de ellas tiene 3 posibles realidades, las mismas
+        te daran la base para responder
+        ya que debes elegir entre una de ellas para cada pregunta hasta completar el cuestionario.
+      </div>
+        <button type="button" id="autodiagnostico__boton" onclick="mostrarContinuar();">Continuar
+    </button>
+  </div>
+  <!------fin------------ DIV ---  AutoDiagnostico -->
+
+<!---------div------Cuestionario------> 
+<div id="resultado" style="display:none">
+    <form action="" name="formulario__preguntas" onsubmit="return verificarRespuestas()">  
+      <h3>Pregunta__01</h3>
+      <input type="radio" name="p1" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p1" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p1" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__02</h3>
+      <input type="radio" name="p2" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p2" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p2" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__03</h3>
+      <input type="radio" name="p3" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p3" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p3" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__04</h3>
+      <input type="radio" name="p4" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p4" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p4" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__05</h3>
+      <input type="radio" name="p5" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p5" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p5" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__06</h3>
+      <input type="radio" name="p6" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p6" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p6" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__07</h3>
+      <input type="radio" name="p7" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p7" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p7" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__08</h3>
+      <input type="radio" name="p8" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p8" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p8" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__09</h3>
+      <input type="radio" name="p9" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p9" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p9" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+      
+      <h3>Pregunta__10</h3>
+      <input type="radio" name="p10" value="pts__1">Si tu empresa se encuentra en esta realidad obtendras 1 punto.<br>
+      <input type="radio" name="p10" value="pts__3">Si tu empresa se encuentra en esta realidad obtendras 3 puntos.<br>
+      <input type="radio" name="p10" value="pts__5">Si tu empresa se encuentra en esta realidad obtendras 5 puntos.<br>
+    
+      <input type="submit" value="Obterner Resultado">
+    </form>
+  </div>
+<!---fin---div------Cuestionario------> 
+
+
+
+
+
+
+
+  <!-- font avesome -->
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+
+
+</body>
+
+</html>

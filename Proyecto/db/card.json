@@ -1,0 +1,21 @@
+[
+      {
+            "imagen": "./imagenes/dani_card.jpeg",
+            "cardTitle": "Ceo_CAM",
+            "cardText": "descripcion_valores",
+            "objetivo": "descripcion__objetivos"
+      },
+      {
+            "imagen": "./imagenes/dani_card.jpeg",
+            "cardTitle": "Ceo_CAM",
+            "cardText": "descripcion_valores",
+            "objetivo": "descripcion__objetivos"
+      },
+      {
+            "imagen": "./imagenes/dani_card.jpeg",
+            "cardTitle": "Ceo_CAM",
+            "cardText": "descripcion_valores",
+            "objetivo": "descripcion__objetivos"
+      }
+
+]
